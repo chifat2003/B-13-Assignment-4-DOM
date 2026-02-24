@@ -164,7 +164,7 @@ function showingInterview(){
 
 
         let div = document.createElement('div')
-        div.className = 'rounded flex justify-between my-6'
+        div.className = 'bg-gray-100 p-4 rounded flex justify-between my-6'
         div.innerHTML = `
                             <div id="card-main">
                         <p class="card-header font-bold text-xl">${interView.cardHeader}</p>
@@ -204,7 +204,7 @@ function showingRejected(){
 
 
         let div = document.createElement('div')
-        div.className = 'rounded flex justify-between my-6'
+        div.className = 'bg-gray-100 p-4 rounded flex justify-between my-6'
         div.innerHTML = `
                             <div id="card-main">
                         <p class="card-header font-bold text-xl">${reject.cardHeader}</p>
