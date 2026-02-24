@@ -1,11 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <p>Git Hub</p>
+    <div id="dashboard" class="w-4/5 mx-auto">
+        <p id="header" class="my-6 text-3xl text-blue-950 font-bold">Job Application Tracker</p>
+        <div id="card-container" class="grid grid-cols-3 gap-6">
+
+            <div id="total-card" class="bg-gray-50 rounded px-6 py-2">
+                <p>Total</p>
+                <p id="total-count" class="text-3xl font-bold text-blue-950">0</p>
+            </div>
+
+            <div id="interview-card" class="bg-gray-50 rounded px-6 py-2">
+                <p>Interview</p>
+                <p id="interview-count" class="text-3xl font-bold text-green-600">0</p>
+            </div>
+
+            <div id="rejected-card" class="bg-gray-50 rounded px-6 py-2">
+                <p>Rejected</p>
+                <p id="rejected-count" class="text-3xl font-bold text-red-600">0</p>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="w-4/5 mx-auto my-6 ">
+
+    <div id="main-container" class="w-4/5 mx-auto my-6">
+    
+        <div id="header-and-count" class="flex justify-between w-full mb-6">
+            <p>Available Jobs</p>
+            <p>8 jobs</p>
+        </div>
+
+        <div id="buttons-toggle" class="gap-8">
+            <button id="all" class="bg-blue-500  text-white py-2 w-24 rounded">All</button>
+            <button id="interview" class="bg-gray-300 text-gray-700 py-2 w-24 rounded">Interview</button>
+            <button id="rejected" class="bg-gray-300 text-gray-700 py-2 w-24 rounded">Rejected</button>
+        </div>
+
+    </div>
+
+    <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+        <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+        <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+        <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+        <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+        <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+        <div id="card-container" class="w-4/5 mx-auto my-6 ">
+        <div id="card" class="bg-gray-100 p-3 rounded flex justify-between ">
+            <div id="card-main">
+                <p class="card-header font-bold text-xl">Mobile First Corp</p>
+                <p class="card-sub-title text-gray-500 mb-2">React Native Developer</p>
+                <ul class="meta-description text-gray-500 my2 flex gap-3 ">
+                    <li id="job-location">Remote</li>
+                    <li id="job-timing">Full-time</li>
+                    <li id="job-payment">$130,000-$175,000</li>
+                </ul>
+                <div class="card-status bg-gray-400 my-4 text-gray-800 py-2 px-4 w-30 rounded">Not Applied</div>
+                <p class="card-description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <div id="card-buttons">
+                    <button class="button-interview mr-8 mt-4 bg-transparent text-green-500 font-semibold py-2 w-24 border border-green-500 rounded">interview</button>
+                    <button class="button-rejected bg-transparent text-red-500 font-semibold py-2 w-24 border border-red-500 rounded">rejected</button>
+                </div>
+
+            </div>
+            <div id="delete-btn">
+                <button id="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/assets/script.js"></script>
 </body>
+
 </html>
